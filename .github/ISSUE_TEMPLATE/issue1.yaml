@@ -55,6 +55,7 @@ body:
   - type: checkboxes
     id: logs
     attributes:
+      label: Logs
       options:
         - label: I have sent logs
           required: false

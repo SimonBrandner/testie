@@ -1,51 +1,62 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: [bug, triage]
-assignees:
-  - octocat
+name: Bug report for Element Web (in browser)
+description: File a bug report if you are using Element in a web browser like Firefox, Chrome, Edge, and so on.
+labels: [T-Defect]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+
+        Please report security issues by email to security@matrix.org
+  - type: textarea
+    id: reproduction-steps
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Steps to reproduce
+      description: Please attach screenshots, videos or logs if you can.
+      placeholder: Tell us what you see!
+      value: |
+        1. Where are you starting? What can you see?
+        2. What do you click?
+        3. More steps…
     validations:
-      required: false
+      required: true
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      placeholder: Tell us what went wrong
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: expected-result
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: What did you expect?
+      placeholder: Tell us what you expected to happen
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: input
+    id: os
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+      label: Operating system
+      placeholder: Windows, macOS, Ubuntu, Arch Linux…
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: Browser information
+      description: Which browser are you using? Which version? 
+      placeholder: e.g. Chromium Version 92.0.4515.131
+    validations:
+      required: false
+  - type: input
+    id: webapp-url
+    attributes:
+      label: URL for webapp
+      description: Which URL are you using to access the webapp? If a private server, tell us what version of Element Web you are using.
+      placeholder: e.g. develop.element.io, app.element.io
+    validations:
+      required: false
   - type: checkboxes
     id: logs
     attributes:

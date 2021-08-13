@@ -63,5 +63,5 @@ body:
         label: Have you done a rageshake?
         description: Did you know that you can send a /rageshake command from your application to submit logs for this issue? Trigger the defect, then type /rageshake into the message entry area, followed by a description of the problem and send the command. This will automatically submit anonymous logs to the developers
         options:
-            - Yes
-            - No
+            - "Yes"
+            - "No"
